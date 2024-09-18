@@ -1,18 +1,16 @@
-import csv
 
-def main():
-    file_object = open('customers.csv','r')
-    csv_object = csv.reader(file_object)
-    outfile = open('customer_country.csv', 'w')
-    csv_outfile = csv.writer(outfile)
-    next(csv_object)
+file_object = open('customers.csv','r')
+csv_object = csv.reader(file_object)
+outfile = open('customer_country.csv', 'w')
+csv_outfile = csv.writer(outfile)
+next(csv_object)
 
-    for row in csv_object:
-        new_row = (row[1], row[2], row[4])
-        csv_outfile.writerow(new_row)
-        print(new_row)
+for row in csv_object:
+    new_row = (row[1], row[2], row[4])
+    csv_outfile.writerow(new_row)
+    print(new_row)
 
-main()
+
 
 
 # customerlist = []
